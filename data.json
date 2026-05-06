@@ -1,0 +1,460 @@
+{
+  "tasks": [
+    {
+      "id": "3",
+      "title": "Grocery shopping",
+      "description": "Buy vegetables and fruits",
+      "priority": "Low",
+      "date": "2026-05-03",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "4",
+      "title": "Study algorithms",
+      "description": "Review sorting algorithms",
+      "priority": "High",
+      "date": "2026-05-04",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "6",
+      "title": "Exercise",
+      "description": "Go for a 30-minute run",
+      "priority": "Low",
+      "date": "2026-05-06",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "7",
+      "title": "Read AI paper new",
+      "description": "Read NLP research paper",
+      "priority": "High",
+      "date": "2026-05-07",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "8",
+      "title": "Client call",
+      "description": "Discuss requirements with client",
+      "priority": "High",
+      "date": "2026-05-08",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "10",
+      "title": "Prepare presentation",
+      "description": "Create slides for project",
+      "priority": "High",
+      "date": "2026-05-10",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "11",
+      "title": "Study database",
+      "description": "Learn SQL joins",
+      "priority": "Medium",
+      "date": "2026-05-11",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "12",
+      "title": "Visit doctor",
+      "description": "Routine health check",
+      "priority": "High",
+      "date": "2026-05-12",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "13",
+      "title": "Fix bug",
+      "description": "Resolve login issue",
+      "priority": "High",
+      "date": "2026-05-13",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "14",
+      "title": "Study ML",
+      "description": "Understand regression models",
+      "priority": "High",
+      "date": "2026-05-14",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "15",
+      "title": "Call friend",
+      "description": "Catch up with a friend",
+      "priority": "Low",
+      "date": "2026-05-15",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "16",
+      "title": "Write report",
+      "description": "Prepare monthly report",
+      "priority": "Medium",
+      "date": "2026-05-16",
+      "category": "Work",
+      "status": "Not Done"
+    },
+    {
+      "id": "17",
+      "title": "Study networking",
+      "description": "Learn TCP/IP basics",
+      "priority": "Medium",
+      "date": "2026-05-17",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "18",
+      "title": "Cook dinner",
+      "description": "Prepare a healthy meal",
+      "priority": "Low",
+      "date": "2026-05-18",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "19",
+      "title": "Deploy app",
+      "description": "Deploy latest version",
+      "priority": "High",
+      "date": "2026-05-19",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "20",
+      "title": "Study OS",
+      "description": "Read about processes",
+      "priority": "Medium",
+      "date": "2026-05-20",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "21",
+      "title": "Laundry",
+      "description": "Wash clothes",
+      "priority": "Low",
+      "date": "2026-05-21",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "22",
+      "title": "Sprint planning",
+      "description": "Plan next sprint tasks",
+      "priority": "High",
+      "date": "2026-05-22",
+      "category": "Work",
+      "status": "Not Done"
+    },
+    {
+      "id": "23",
+      "title": "Study security",
+      "description": "Learn about encryption",
+      "priority": "High",
+      "date": "2026-05-23",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "24",
+      "title": "Buy gift",
+      "description": "Purchase birthday gift",
+      "priority": "Medium",
+      "date": "2026-05-24",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "25",
+      "title": "Fix UI",
+      "description": "Improve dashboard layout",
+      "priority": "Medium",
+      "date": "2026-05-25",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "26",
+      "title": "Study AI",
+      "description": "Explore neural networks",
+      "priority": "High",
+      "date": "2026-05-26",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "27",
+      "title": "Watch movie",
+      "description": "Relax with a movie",
+      "priority": "Low",
+      "date": "2026-05-27",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "28",
+      "title": "Optimize query",
+      "description": "Improve SQL performance",
+      "priority": "High",
+      "date": "2026-05-28",
+      "category": "Work",
+      "status": "Not Done"
+    },
+    {
+      "id": "29",
+      "title": "Study compilers",
+      "description": "Understand parsing",
+      "priority": "Medium",
+      "date": "2026-05-29",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "30",
+      "title": "Meditation",
+      "description": "Practice mindfulness",
+      "priority": "Low",
+      "date": "2026-05-30",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "31",
+      "title": "Write tests",
+      "description": "Add unit tests",
+      "priority": "High",
+      "date": "2026-05-31",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "32",
+      "title": "Study cloud",
+      "description": "Learn AWS basics",
+      "priority": "Medium",
+      "date": "2026-06-01",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "33",
+      "title": "Visit family",
+      "description": "Family gathering",
+      "priority": "Low",
+      "date": "2026-06-02",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "34",
+      "title": "Refactor code",
+      "description": "Clean up codebase",
+      "priority": "Medium",
+      "date": "2026-06-03",
+      "category": "Work",
+      "status": "Not Done"
+    },
+    {
+      "id": "35",
+      "title": "Study data structures",
+      "description": "Review trees and graphs",
+      "priority": "High",
+      "date": "2026-06-04",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "36",
+      "title": "Go shopping",
+      "description": "Buy clothes",
+      "priority": "Low",
+      "date": "2026-06-05",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "37",
+      "title": "Update docs",
+      "description": "Update API documentation",
+      "priority": "Medium",
+      "date": "2026-06-06",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "38",
+      "title": "Study math",
+      "description": "Practice linear algebra",
+      "priority": "High",
+      "date": "2026-06-07",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "39",
+      "title": "Gym",
+      "description": "Workout session",
+      "priority": "Low",
+      "date": "2026-06-08",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "40",
+      "title": "Design system",
+      "description": "Create system architecture",
+      "priority": "High",
+      "date": "2026-06-09",
+      "category": "Work",
+      "status": "Not Done"
+    },
+    {
+      "id": "41",
+      "title": "Study NLP",
+      "description": "Learn text preprocessing",
+      "priority": "Medium",
+      "date": "2026-06-10",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "42",
+      "title": "Travel plan",
+      "description": "Plan weekend trip",
+      "priority": "Low",
+      "date": "2026-06-11",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "43",
+      "title": "Debug issue",
+      "description": "Fix API error",
+      "priority": "High",
+      "date": "2026-06-12",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "44",
+      "title": "Study statistics",
+      "description": "Understand probability",
+      "priority": "Medium",
+      "date": "2026-06-13",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "45",
+      "title": "Read book",
+      "description": "Finish novel",
+      "priority": "Low",
+      "date": "2026-06-14",
+      "category": "Personal",
+      "status": "Done"
+    },
+    {
+      "id": "46",
+      "title": "Release update",
+      "description": "Publish new version",
+      "priority": "High",
+      "date": "2026-06-15",
+      "category": "Work",
+      "status": "Not Done"
+    },
+    {
+      "id": "47",
+      "title": "Study robotics",
+      "description": "Learn ROS basics",
+      "priority": "Medium",
+      "date": "2026-06-16",
+      "category": "Study",
+      "status": "Done"
+    },
+    {
+      "id": "48",
+      "title": "Clean kitchen",
+      "description": "Organize kitchen",
+      "priority": "Low",
+      "date": "2026-06-17",
+      "category": "Personal",
+      "status": "Not Done"
+    },
+    {
+      "id": "49",
+      "title": "Meeting with manager",
+      "description": "Discuss performance",
+      "priority": "High",
+      "date": "2026-06-18",
+      "category": "Work",
+      "status": "Done"
+    },
+    {
+      "id": "50",
+      "title": "Study deep learning",
+      "description": "Understand CNN basics",
+      "priority": "High",
+      "date": "2026-06-19",
+      "category": "Study",
+      "status": "Not Done"
+    },
+    {
+      "id": "fTXdIA4q-Jc",
+      "title": "Task by sara",
+      "description": "This is task created by sara",
+      "priority": "Medium",
+      "date": "2026-05-16",
+      "category": "Work",
+      "status": "Done"
+    }
+  ],
+  "users": [
+    {
+      "id": "kWPqaJo32rY",
+      "email": "sara@hotmail.com",
+      "password": "12345678",
+      "username": "sara_bisheer"
+    },
+    {
+      "id": "Q1dv_rs3WPg",
+      "email": "nada@gmail.com",
+      "password": "123123123",
+      "username": "Nada_Mostafa"
+    },
+    {
+      "id": "eiJMqsbpfo0",
+      "email": "ali@hotmail.com",
+      "password": "12345678",
+      "username": "Ali_Nader"
+    },
+    {
+      "id": "fbNOnllvTGI",
+      "email": "gm@gmail.com",
+      "password": "12345678",
+      "username": "gamal_fathy"
+    },
+    {
+      "id": "bKVfSkuLiKE",
+      "email": "hj@jdf.com",
+      "password": "12345678",
+      "username": "Hamdy"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,45 @@
+<div class="card h-100 d-flex flex-column">
+  <div class="card-body flex-grow-1">
+    <h4 class="card-title fw-bold">{{ task.title }}</h4>
+    <p class="card-text text-truncate-3">
+      {{ task.description }}
+    </p>
+
+    <div class="mt-3">
+      <h5><strong>Priority:</strong> {{ task.priority }}</h5>
+      <h5><strong>Category:</strong> {{ task.category }}</h5>
+      <h5><strong>Date:</strong> {{ task.date }}</h5>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent d-flex justify-content-between gap-2 border-top-0 pb-3">
+    @if (task.status == 'Not Done') {
+      <button class="btn btn-sm btn-primary flex-grow-1" (click)="doneFun()">Done</button>
+    }
+    <button class="btn btn-sm btn-danger flex-grow-1" (click)="deleteFun()">Delete</button>
+    <button
+      type="button"
+      class="btn btn-sm btn-secondary flex-grow-1"
+      (click)="dialogUpdate.showModal()"
+    >
+      Update
+    </button>
+  </div>
+</div>
+
+<dialog #dialogUpdate class="container w-50 border-0 rounded shadow-lg p-0">
+  <div class="modal-content border-0">
+    <div class="modal-header d-flex justify-content-between align-items-center bg-light p-3">
+      <h5 class="modal-title fw-bold text-primary m-0">Update Task</h5>
+      <button type="button" class="btn-close" (click)="dialogUpdate.close()"></button>
+    </div>
+    <div class="modal-body p-4">
+      <app-input-form [taskObj]="Updatedtask" [isUpdateForm]="true"></app-input-form>
+    </div>
+    <div class="modal-footer p-3 d-flex justify-content-end gap-2">
+      <button type="button" class="btn btn-light" (click)="dialogUpdate.close()">Close</button>
+      <button type="button" class="btn btn-primary" (click)="updateFun(); dialogUpdate.close()">
+        Save Changes
+      </button>
+    </div>
+  </div>
+</dialog>

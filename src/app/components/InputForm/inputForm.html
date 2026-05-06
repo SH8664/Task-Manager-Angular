@@ -1,0 +1,73 @@
+@if (isUpdateForm == false) {
+  <h2 class="mb-3 text-center text-primary">Task Form</h2>
+}
+<div class="container p-3 mb-3 w-75 bg-light border border-primary rounded">
+  <form class="m-2">
+    <div class="row">
+      <div class="mb-3 col-6 d-flex align-items-center">
+        <label for="title" class="form-label me-2" style="white-space: nowrap">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="taskObj.title"
+          name="Title"
+        />
+      </div>
+      <div class="mb-3 col-6 d-flex align-items-center">
+        <label for="category" class="form-label me-2" style="white-space: nowrap">Category</label>
+        <select
+          id="category"
+          class="form-select form-select-sm"
+          [(ngModel)]="taskObj.category"
+          name="Category"
+        >
+          <option selected disabled>Select Category</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+          <option value="Study">Study</option>
+        </select>
+      </div>
+
+      <div class="mb-3 col-12 d-flex align-items-center">
+        <label for="description" class="form-label me-2" style="white-space: nowrap"
+          >Description</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="taskObj.description"
+          name="Description"
+        />
+      </div>
+
+      <div class="mb-3 col-6 d-flex align-items-center">
+        <label for="priority" class="form-label me-2" style="white-space: nowrap">Priority</label>
+        <select
+          id="priority"
+          class="form-select form-select-sm"
+          [(ngModel)]="taskObj.priority"
+          name="Priority"
+        >
+          <option selected disabled>Select Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div class="mb-3 col-6 d-flex align-items-center">
+        <label for="date" class="form-label me-2" style="white-space: nowrap">Date</label>
+
+        <input type="date" id="date" class="form-control" [(ngModel)]="taskObj.date" name="Date" />
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    @if (isUpdateForm == false) {
+      <div class="mb-3 col-2">
+        <button type="submit" class="btn btn-primary" (click)="addTask()">Add Task</button>
+      </div>
+    }
+  </div>
+</div>

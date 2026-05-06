@@ -1,0 +1,33 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <span
+      class="nav-link active"
+      aria-current="page"
+      [class.bg-primary]="activeTab === 'list'"
+      [class.text-white]="activeTab === 'list'"
+      (click)="activeTab = 'list'; loadTasks()"
+      >All Lists</span
+    >
+  </li>
+  <li class="nav-item">
+    <span
+      class="nav-link active"
+      aria-current="page"
+      [class.bg-primary]="activeTab === 'done'"
+      [class.text-white]="activeTab === 'done'"
+      (click)="activeTab = 'done'; loadTasks()"
+      >Done Lists</span
+    >
+  </li>
+  <li class="nav-item">
+    <span
+      class="nav-link active"
+      aria-current="page"
+      [class.bg-primary]="activeTab === 'notdone'"
+      [class.text-white]="activeTab === 'notdone'"
+      (click)="activeTab = 'notdone'; loadTasks()"
+      >Not Done Lists</span
+    >
+  </li>
+</ul>
+<app-list [tasks]="tasks"></app-list>

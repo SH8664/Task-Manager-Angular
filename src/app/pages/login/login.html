@@ -1,0 +1,46 @@
+<!-- Template Driven Form -->
+<div class="d-flex align-items-center justify-content-center min-vh-100">
+  <div class="p-3 bg-info bg-opacity-10 border border-info rounded-end">
+    <h1 class="text-center mb-4">Login</h1>
+    <form #loginForm="ngForm" (submit)="login(loginForm)">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          ngModel
+          #email="ngModel"
+          name="email"
+          type="email"
+          class="form-control"
+          id="email"
+          pattern="^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$"
+          required
+          [style.border-color]="email?.errors?.['required'] ? 'red' : ''"
+        />
+      </div>
+
+      @if (email?.errors?.['pattern'] && email.dirty) {
+        <p class="text-danger">invalid email pattern</p>
+      }
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          ngModel
+          #password="ngModel"
+          name="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          required
+          [style.border-color]="password?.errors?.['required'] ? 'red' : ''"
+        />
+      </div>
+      @if (invalidPassword) {
+        <p class="text-danger">invalid password or email</p>
+      }
+      <br />
+      <p>Don't have an account? <a class="" routerLink="/signUp">Sign Up</a></p>
+      <br />
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>

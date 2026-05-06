@@ -1,0 +1,9 @@
+<div class="container p-3 mb-2">
+  <div class="row">
+    @for (i of tasks; track i.id) {
+      <div class="col-12 col-md-4">
+        <app-card [task]="i"></app-card>
+      </div>
+    }
+  </div>
+</div>

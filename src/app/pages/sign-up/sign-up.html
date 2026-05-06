@@ -1,0 +1,82 @@
+<!-- Reactive Form -->
+
+<div class="d-flex align-items-center justify-content-center min-vh-100">
+  <div class="p-3 mb-2 border border-info rounded-end w-25">
+    <h1 class="text-center mb-4">Sign Up</h1>
+    <form [formGroup]="form" (submit)="handleSubmit($event)">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          formControlName="username"
+          type="text"
+          class="form-control"
+          id="username"
+          [style.border-color]="
+            form.controls.username.errors?.['required'] && form.controls.username.touched
+              ? 'red'
+              : ''
+          "
+        />
+      </div>
+      @if (form.controls.username.errors?.['minlength'] && form.controls.username.dirty) {
+        <p class="text-danger">Min length should be 5</p>
+      }
+      @if (usernameExists) {
+        <p class="text-danger">Username already exists</p>
+      }
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="email"
+          [style.border-color]="
+            form.controls.email.errors?.['required'] && form.controls.email.touched ? 'red' : ''
+          "
+        />
+        @if (form.controls.email.errors?.['pattern'] && form.controls.email.dirty) {
+          <p class="text-danger">invalid email pattern</p>
+        }
+        @if (emailExists) {
+          <p class="text-danger">Email already exists</p>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          [style.border-color]="
+            form.controls.password.errors?.['required'] && form.controls.password.touched
+              ? 'red'
+              : ''
+          "
+        />
+      </div>
+      @if (form.controls.password.errors?.['minlength'] && form.controls.password.dirty) {
+        <p class="text-danger">Min length should be 8</p>
+      }
+
+      <div class="mb-3">
+        <label for="confirm" class="form-label">Confirm Password</label>
+        <input
+          formControlName="confirm"
+          type="password"
+          class="form-control"
+          id="confirm"
+          [style.border-color]="
+            form.controls.confirm.errors?.['required'] && form.controls.confirm.touched ? 'red' : ''
+          "
+        />
+      </div>
+      @if (form.errors?.['noMatch']) {
+        <p class="text-danger">Passwords don't match</p>
+      }
+
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+</div>

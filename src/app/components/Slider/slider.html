@@ -1,0 +1,48 @@
+<div class="container p-3 mb-2 bg-body-tertiary bg-gradient">
+  <div class="row justify-content-center mb-3">
+    <div class="col-2 align-self-center text-center">
+      <h1>
+        <i
+          class="bi bi-arrow-left-square-fill"
+          (click)="clearTimers(); selected = (selected - 1 + ImgPaths.length) % ImgPaths.length"
+        ></i>
+      </h1>
+    </div>
+    @for (i of ImgPaths; track i.id) {
+      @if (i.id == selected) {
+        <div class="col-6">
+          <img [src]="i.src" width="100%" style="aspect-ratio: 1" />
+        </div>
+      }
+    }
+    <div class="col-2 align-self-center text-center">
+      <h1>
+        <i
+          class="bi bi-arrow-right-square-fill"
+          (click)="clearTimers(); selected = (selected + 1) % ImgPaths.length"
+        ></i>
+      </h1>
+    </div>
+  </div>
+  <div class="row justify-content-center mb-3">
+    @for (i of ImgPaths; track i.id) {
+      <div
+        id="i.id"
+        class="col-1 mx-1 circle"
+        [style.background-color]="selected == i.id ? i.color : 'gray'"
+        (click)="clearTimers(); selected = i.id"
+      ></div>
+    }
+  </div>
+  <div class="row justify-content-center mb-3">
+    <div class="col-2">
+      <button type="button" class="btn btn-primary" (click)="forward()">
+        Forward Sliding
+      </button>
+    </div>
+
+    <div class="col-2">
+      <button type="button" class="btn btn-success" (click)="backward()">Backward Sliding</button>
+    </div>
+  </div>
+</div>
