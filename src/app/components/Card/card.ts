@@ -20,6 +20,12 @@ import { TaskService } from '../../services/taskservice';
 export class Card {
   @Input() task = new Task();
 
+  priorityColor: any = {
+    Low: '#d1e7dd',
+    Medium: '#fff3cd',
+    High: '#f8d7da',
+  };
+
   // make a copy of the task
   Updatedtask: any;
 

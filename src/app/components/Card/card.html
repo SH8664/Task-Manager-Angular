@@ -1,4 +1,4 @@
-<div class="card h-100 d-flex flex-column">
+<div class="card h-100 d-flex flex-column" [style.background-color]="priorityColor[task.priority]">
   <div class="card-body flex-grow-1">
     <h4 class="card-title fw-bold">{{ task.title }}</h4>
     <p class="card-text text-truncate-3">
@@ -6,7 +6,7 @@
     </p>
 
     <div class="mt-3">
-      <h5><strong>Priority:</strong> {{ task.priority }}</h5>
+      <!-- <h5><strong>Priority:</strong> {{ task.priority }}</h5> -->
       <h5><strong>Category:</strong> {{ task.category }}</h5>
       <h5><strong>Date:</strong> {{ task.date }}</h5>
     </div>
