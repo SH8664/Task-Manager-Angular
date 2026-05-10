@@ -4,6 +4,7 @@ import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Layout } from './components/layout/layout';
 import { AddTask } from './pages/add-task/add-task';
 import { Tasks } from './pages/tasks/tasks';
+import { ChatbotPage } from './pages/chatbot/chatbot';
 import { SignUp } from './pages/sign-up/sign-up';
 import { Login } from './pages/login/login';
 import { authGuard } from './auth-guard';
@@ -36,6 +37,11 @@ export const routes: Routes = [
       {
         path: 'tasks',
         component: Tasks,
+        canActivate: [authGuard],
+      },
+      {
+        path: 'chatbot',
+        component: ChatbotPage,
         canActivate: [authGuard],
       },
     ],

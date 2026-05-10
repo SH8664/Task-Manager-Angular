@@ -456,5 +456,14 @@
       "username": "Hamdy"
     }
   ],
+  "channels": [
+    {
+      "id": "aVZRlhUr7L0",
+      "name": "General",
+      "description": "Custom chat channel for General.",
+      "prompt": "Welcome to General. Ask a question and I will help you with this new topic.",
+      "images": []
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

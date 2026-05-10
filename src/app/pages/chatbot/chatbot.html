@@ -1,0 +1,109 @@
+<div class="chatbot-page container py-4">
+  <div class="row mb-4">
+    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+      <div class="card sidebar p-3">
+        <div class="d-flex align-items-start justify-content-between mb-3 gap-2 flex-wrap">
+          <div>
+            <h5 class="mb-1">Channels</h5>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">New channel</label>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Custom channel name"
+              [(ngModel)]="newChannelName"
+              [disabled]="loading"
+              (keydown.enter)="addChannel()"
+            />
+            <button
+              class="btn btn-primary"
+              type="button"
+              [disabled]="!newChannelName.trim()"
+              (click)="addChannel()"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+
+        <div class="channel-list list-group">
+          <button
+            type="button"
+            class="list-group-item list-group-item-action"
+            [class.active]="selectedChannel?.id === channel.id"
+            *ngFor="let channel of channels"
+            (click)="selectChannel(channel)"
+          >
+            {{ channel.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-8">
+      <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+      <div class="mb-3">
+        <div class="btn-group" role="group">
+          <button
+            class="btn"
+            [class.btn-primary]="mode === 'text'"
+            [class.btn-outline-secondary]="mode !== 'text'"
+            type="button"
+            (click)="selectMode('text')"
+          >
+            Text Chat
+          </button>
+          <button
+            class="btn"
+            [class.btn-primary]="mode === 'image'"
+            [class.btn-outline-secondary]="mode !== 'image'"
+            type="button"
+            (click)="selectMode('image')"
+          >
+            Image Mode
+          </button>
+        </div>
+      </div>
+
+      <div class="chat-window mb-3">
+        <div *ngFor="let message of history" class="message-row" [ngClass]="message.sender">
+          <div class="message-content">
+            <small class="message-meta"
+              >{{ message.sender === 'user' ? 'You' : selectedChannel?.name || 'Bot' }} •
+              {{ message.time }}</small
+            >
+            <div class="message-bubble" *ngIf="message.text">{{ message.text }}</div>
+            <div class="message-image" *ngIf="message.imageUrl">
+              <img [src]="message.imageUrl" alt="Generated image" />
+              <p class="mt-2 mb-0 text-muted small">{{ message.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-row input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Type your message..."
+          [(ngModel)]="messageInput"
+          [disabled]="loading"
+          (keydown.enter)="sendMessage()"
+        />
+        <button
+          class="btn btn-primary"
+          type="button"
+          [disabled]="loading || !messageInput.trim()"
+          (click)="sendMessage()"
+        >
+          {{ loading ? 'Working...' : mode === 'text' ? 'Send' : 'Generate' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
